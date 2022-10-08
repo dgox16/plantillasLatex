@@ -1,0 +1,72 @@
+% LTeX:language=es
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[a4paper,left=2.14cm,right=2.14cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{subfigure}
+\usepackage{stackengine}
+\setstackEOL{\\}
+
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Índice de código}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\abstractname}{Resumen}
+\renewcommand{\refname}{Referencias}
+
+\newcommand\titulo{Título del proyecto}
+\newcommand\materia{Materia}
+\newcommand\fecha{7 de octubre, 2022}
+
+\title {\vspace{5mm} \titulo}
+\date{\fecha}
+\author{Diego Armando Gómez Martínez\\
+	\materia}
+
+\definecolor{light-gray}{gray}{0.95}
+\lstset{
+	basicstyle=%
+	\ttfamily
+	\lst@ifdisplaystyle\scriptsize\fi,
+	backgroundcolor=\color{light-gray},
+	xleftmargin=0.7cm,
+	xrightmargin=0.7cm
+}
+
+\fancypagestyle{plain}{
+	\renewcommand{\headrulewidth}{0pt}
+
+	\lhead{%
+		\Centerstack[l]{\small Campus Irapuato-Salamanca \\
+			\small	Departamento de Estudios Multidisciplinarios
+		}
+	}
+	\chead{}
+	\rhead{\raisebox{-.4\height}
+		{\includegraphics[scale=0.072]{figures/logoUG.png}}}
+	\fancyfoot{}
+	\rfoot{\thepage}
+}
+
+\fancypagestyle{restpages}{
+	\fancyhf{}
+	\fancyhead{}
+	\lhead{\materia}
+	\rhead{\fecha}
+	\fancyfoot{}
+	\rfoot{\thepage}
+	\newgeometry{a4paper,left=2.14cm,right=2.14cm,top=3cm,bottom=3cm}
+}
+\begin{document}
+\maketitle
+\vspace{0.5cm}
+\pagestyle{restpages}
+
+\end{document}
