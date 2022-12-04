@@ -11,6 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage{subfigure}
 \usepackage{stackengine}
+\usepackage{svg}
 \setstackEOL{\\}
 
 \renewcommand{\lstlistingname}{Código}
@@ -35,6 +36,9 @@
 	basicstyle=%
 	\ttfamily
 	\lst@ifdisplaystyle\scriptsize\fi,
+	keywordstyle=\color{magenta},
+	commentstyle=\color{codegreen},
+	stringstyle=\color{codepurple},
 	backgroundcolor=\color{light-gray},
 	xleftmargin=0.7cm,
 	xrightmargin=0.7cm
@@ -50,7 +54,7 @@
 	}
 	\chead{}
 	\rhead{\raisebox{-.4\height}
-		{\includegraphics[scale=0.072]{figures/logoUG.png}}}
+		{\includesvg[scale=2.0]{figures/universidad-guanajuato-lineas.svg}}}
 	\fancyfoot{}
 	\rfoot{\thepage}
 }

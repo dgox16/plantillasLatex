@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{subfigure}
+\usepackage{svg}
 
 \renewcommand{\lstlistingname}{Código}
 \renewcommand{\lstlistlistingname}{Índice de código}
@@ -22,12 +23,19 @@
 \newcommand\materia{MATERIA}
 \newcommand\fecha{16 de diciembre, 2022}
 
+\newcommand\profProyectos{Geovanni Hernández Gómez}
+\newcommand\profRedes{Tarsicio Ramos Lemus}
+\newcommand\profInformatica{Adan Flores Balderas}
+
 \definecolor{light-gray}{gray}{0.95}
 \lstset{
 	basicstyle=%
 	\ttfamily
 	\lst@ifdisplaystyle\scriptsize\fi,
 	backgroundcolor=\color{light-gray},
+	keywordstyle=\color{magenta},
+	commentstyle=\color{codegreen},
+	stringstyle=\color{codepurple},
 	xleftmargin=0.7cm,
 	xrightmargin=0.7cm
 }
@@ -45,7 +53,7 @@
 		\vspace{1cm}
 		\textsc{\Large \materia}\\
 		\vspace{1.5cm}
-		{\includegraphics[width=0.34\textwidth]{figures/logoUG.png}\par}
+		{\includesvg[width=0.34\textwidth]{figures/universidad-guanajuato-lineas.svg}\par}
 		\vspace{1.9cm}
 		\textsc{\large NUMERO DE TAREA}\\
 		\vspace{0.5cm}
@@ -61,6 +69,7 @@
 	\end{center}
 \end{titlepage}
 
+% Indice
 \thispagestyle{empty}
 \tableofcontents
 \newpage
